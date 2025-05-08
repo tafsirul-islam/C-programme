@@ -1,18 +1,7 @@
-//C programme
-#include<stdio.h>
+//C programme #include<stdio.h>
 
-int main()
-{ 
-    // Array 123
-    int rows,cols;
-    printf("Enter row and column :\n");
-    printf("row = ");
-    scanf("%d",&rows);
-    printf("columns = ");
-    scanf("%d",&cols);
-    int matrix[rows][cols];
-    
-    
+int main() { // Array int rows,cols; printf("Enter row and column :\n"); printf("row = "); scanf("%d",&rows); printf("columns = "); scanf("%d",&cols); int matrix[rows][cols];
+
     printf("Enter your matrix value:\n");
     for( int row=0;row<rows;row++){
       for(int col=0;col<cols;col++){
@@ -40,4 +29,4 @@ int main()
     }
     
     return 0;
-}
+    }
