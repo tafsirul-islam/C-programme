@@ -80,7 +80,7 @@ int main()
       }
      }
     }
-    printf("\nSum of non-diagonal elements =%d",sum1);
+    printf("\nSum of non-diagonal elements =%d\n",sum1);
     
     
     
