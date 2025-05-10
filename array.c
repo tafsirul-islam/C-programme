@@ -81,10 +81,45 @@ int main()
      }
     }
     printf("\nSum of non-diagonal elements =%d\n",sum1);
+
+
+    //Multiplication main diagonal elements
+    int sum3=1;
+    printf("\n\nDiagonal elements is\n"); 
+    for(int row=0;row<rows;row++){
+     for(int col=0;col<cols;col++){
+      if(col==row){
+        printf("%d ",matrix[row][col]);
+        sum3*=matrix[row][col];
+      }
+     }
+    }
+    printf("\nMultiplication main diagonal elements is =%d\n",sum3);
     
+    
+    //identity matrix
+    int a=0;
+    printf("\nIdentity matrix\n"); 
+    for(int row=0;row<rows;row++){
+     for(int col=0;col<cols;col++){
+      if(col==row){
+        if (matrix[row][col]!=1)
+        a+=1;
+      }
+      else if(row!=col){
+      if (matrix[row][col]!=0)
+      a+=1;
+      }
+     }
+    }
+    if(a==0)
+    printf("It's identity matrix.\n");
+    else
+    printf("It's not identity matrix.\n");    
     
     
    } 
    
     return 0;
 }
+
