@@ -17,7 +17,7 @@ int main()
     printf("columns = ");
     scanf("%d",&col2);
     
-    if(row1!=col1 || row2!=col2 || row1!=row2 || col1!=col2){
+    if(col1!=row2){
     printf("It's not possible.");
     }
     
@@ -57,31 +57,24 @@ int main()
       printf("\n");
     }
     
-    //Addition matrix
-    printf("Addition matrix =\n");
-    for(int row=0;row<row1;row++){
-      for(int col=0;col<col1;col++){
-       printf("%d ",matrix1[row][col] + matrix2[row][col]);
+    
+    //Multiplication matrix
+    int multiplication[row1][col2];
+    for(int i=0;i<row1;i++){
+      for(int j=0;j<col2;j++){
+        multiplication[i][j] =0;
+        for(int l=0;l<col1;l++){
+          multiplication[i][j]+=matrix1[i][l]*matrix2[l][j];
+        }
       }
-      printf("\n");
     }
     
-    //Subtraction matrix
-    printf("Subtraction matrix frist -second =\n");
+    printf("\nMultiplication matrix is =\n");
     for(int row=0;row<row1;row++){
-      for(int col=0;col<col1;col++){
-       printf("%d ",matrix1[row][col] - matrix2[row][col]);
-      }
-      printf("\n");
-    }
-    
-    //Subtraction matrix
-    printf("Subtraction matrix second -frist =\n");
-    for(int row=0;row<row1;row++){
-      for(int col=0;col<col1;col++){
-       printf("%d ",matrix2[row][col] - matrix1[row][col]);
-      }
-      printf("\n");
+     for(int col=0;col<col2;col++){
+      printf("%d ",multiplication[row][col]);
+     }
+     printf("\n");
     }
     
     printf("\n");
